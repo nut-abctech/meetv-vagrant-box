@@ -14,7 +14,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.
-  # config.vm.box_url = "https://dl.dropbox.com/u/2289657/squeeze32-vanilla.box"
+  config.vm.box_url = "http://f.willianfernandes.com.br/vagrant-boxes/DebianSqueeze64.box"
 
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,

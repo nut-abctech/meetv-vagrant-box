@@ -27,6 +27,15 @@ class meetv::env {
         "zlib1g-dev",
         "xapian-tools",
         ]
+    $vagrant_data = [
+            "/home/vagrant/vagrant_data",
+            "/home/vagrant/vagrant_data/log",
+            "/home/vagrant/vagrant_data/xapian",
+            "/home/vagrant/vagrant_data/xapian/events",
+            "/home/vagrant/vagrant_data/xapian/entities",
+            "/home/vagrant/vagrant_data/xapian/channels",
+            "/home/vagrant/vagrant_data/xapian/uepg",
+        ]
 
     file {
         "/home/vagrant/.profile":
@@ -42,7 +51,12 @@ class meetv::env {
         "add-backports":
         ensure => "present",
         name    => "/etc/apt/sources.list.d/pgdg.list",
-        content => "deb http://apt.postgresql.org/pub/repos/apt/ squeeze-pgdg main",
+        content => "deb http://apt.postgresql.org/pub/repos/apt/squeeze-pgdg main";
+
+        $vagrant_data:
+        ensure => "directory",
+        owner  => vagrant,
+        group  => vagrant,
     }
 
     exec {
