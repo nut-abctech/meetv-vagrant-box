@@ -1,6 +1,6 @@
 class meetv::perl {
   package {
-      ["perl-doc", "libreadline-dev"]:
+      ["perl-doc"]:
       ensure => installed,
   }
 
