@@ -100,10 +100,11 @@
                  #- 192.168.51.122:9200
                   - 192.168.51.231:2200
                transport: httplite
-        IMDb:
-          class: MeeTV::Sponge::Source::Local::IMDb
+        TheMovieDB:
+          class: MeeTV::Sponge::Source::External::TheMovieDB
           config:
-            servers:
-#              - dev-elastic.startsiden.dev:9200
-              - localhost:9200
-            transport: httplite
+            types:
+              - movie
+            chi_config:
+              driver: File
+              root_dir: /home/vagrant/vagrant_data/spouge-themoviedb.cache

@@ -68,7 +68,7 @@ class meetv::env {
 
     exec { "update-apt":
         command => "apt-get update",
-        user   => 'root',
+        user    => 'root',
         path    => '/usr/sbin:/usr/bin:/sbin:/bin',
         require => Exec['import-the-repository-key'],
     }

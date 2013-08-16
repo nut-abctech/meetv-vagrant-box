@@ -14,8 +14,8 @@ import "classes/*"
 #[***REQUIRE***]
 #git user credential 
 $username = "nut-abctech"
-$email = "nut@abctech-thailand.com"
-$password = "PraditR1qa2ws"
+$email = "xxx"
+$password = "xxx"
 
 group { "puppet":
     ensure => "present",
