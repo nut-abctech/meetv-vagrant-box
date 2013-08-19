@@ -11,12 +11,6 @@
 
 import "classes/*"
 
-#[***REQUIRE***]
-#git user credential 
-$username = "nut-abctech"
-$email = "xxx"
-$password = "xxx"
-
 group { "puppet":
     ensure => "present",
 }
@@ -40,9 +34,3 @@ class {'meetv::env': }
         }}
     -> class {'meetv::database':}
     -> class {'meetv::perl':}
-    -> class {'meetv::git::clone':
-        username => $username,
-        email => $email,
-        password => $password,
-    } 
-
